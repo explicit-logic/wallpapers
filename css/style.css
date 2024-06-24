@@ -1,0 +1,111 @@
+html {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+  background-color: #000000;
+  transition: 1s ease all;
+}
+
+.download-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.192);
+  color: rgb(77, 77, 77);
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.021);
+  transition: all 0.3s;
+}
+
+.download-button svg {
+  height: 25px;
+  fill: rgb(77, 77, 77);
+  transition: all 0.3s;
+}
+.download-button:active {
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.11);
+  background-color: rgb(230, 230, 230);
+}
+.download-button:active svg {
+  fill: white;
+}
+
+.sidebar {
+  position: fixed;
+  top: 5rem;
+  right: 2rem;
+}
+
+
+.glass-button-wrapper {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  place-content: flex-end;
+  place-items: center;
+  flex-flow: column;
+  text-align: center;
+  bottom: 10rem;
+}
+
+.glass-button {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+  height: 50px;
+  border: 0;
+  text-decoration: none;
+  border-radius: 15px;
+  background-color: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(30px);
+  color: rgba(255,255,255,0.8);
+  font-size: 1.2rem;
+  font-family: Montserrat;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.glass-button:active {
+  background-color: rgba(255,255,255,0.3);
+}
+
+.glass-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    100deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+
+  animation: shine 6s ease-in-out infinite;
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+    transition-property: left;
+  }
+  /* ($anim-speed / ($anim-duration + $anim-speed) * 100%), */
+  100% {
+    left: 100%;
+    transition-property: left;
+  }
+}
+
+.glass-button svg {
+  padding-right: 7px;
+}
