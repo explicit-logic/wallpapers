@@ -13,9 +13,10 @@ module.exports = merge(common, {
       patterns: [
         // { from: 'img', to: 'img' },
         { from: 'css', to: 'css' },
-        { from: 'js/vendor', to: 'js/vendor' },
+        // { from: 'js/vendor', to: 'js/vendor' },
         { from: 'favicon.ico', to: 'favicon.ico' },
         { from: 'robots.txt', to: 'robots.txt' },
+        { from: 'og-image.png', to: 'og-image.png' },
         { from: 'apple-touch-icon.png', to: 'apple-touch-icon.png' },
         { from: 'android-chrome-192x192.png', to: 'android-chrome-192x192.png' },
         { from: 'android-chrome-512x512.png', to: 'android-chrome-512x512.png' },

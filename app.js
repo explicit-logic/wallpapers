@@ -5,7 +5,7 @@ function importAll(r) {
   return r.keys().map(r);
 }
 
-const images = importAll(require.context('./img', true, /\.(png|jpe?g)$/));
+const images = importAll(require.context('./photos', true, /\.(png|jpe?g)$/));
 
 function applyBackgroundImage(url) {
   document.documentElement.style.backgroundImage = `url('${url}')`;
