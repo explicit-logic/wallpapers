@@ -9,7 +9,7 @@ html {
   transition: 1s ease all;
 }
 
-.download-button {
+.sidebar-button {
   width: 50px;
   height: 50px;
   border-radius: 10px;
@@ -21,18 +21,18 @@ html {
   cursor: pointer;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.021);
   transition: all 0.3s;
+  background-color: rgb(230, 230, 230);
 }
 
-.download-button svg {
+.sidebar-button svg {
   height: 25px;
   fill: rgb(77, 77, 77);
   transition: all 0.3s;
 }
-.download-button:active {
+.sidebar-button:active {
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.11);
-  background-color: rgb(230, 230, 230);
 }
-.download-button:active svg {
+.sidebar-button:active svg {
   fill: white;
 }
 
@@ -40,8 +40,10 @@ html {
   position: fixed;
   top: 5rem;
   right: 2rem;
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
 }
-
 
 .glass-button-wrapper {
   position: absolute;
