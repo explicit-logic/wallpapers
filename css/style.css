@@ -39,7 +39,7 @@ html {
 .sidebar {
   position: fixed;
   top: 5rem;
-  right: 2rem;
+  right: 1rem;
   display: flex;
   flex-flow: column;
   gap: 1rem;

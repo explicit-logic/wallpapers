@@ -3,3 +3,5 @@ node_modules
 
 # Generated files
 dist
+
+.DS_Store
