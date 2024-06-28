@@ -2,19 +2,20 @@
 let imageIndex = localStorage.getItem('background') ? Number(localStorage.getItem('background')) : 0;
 
 function importAll(r) {
-  return r.keys().map(r);
+  return r.keys().reverse().map(r);
 }
 
-const images = importAll(require.context('./photos', true, /\.(png|jpe?g)$/));
+const images = importAll(require.context('./photos', true, /\.(png|jpe?g)$/i));
+
+document.documentElement.style.backgroundRepeat = "no-repeat";
+document.documentElement.style.backgroundPosition = "center";
+document.documentElement.style.backgroundAttachment = "fixed";
+document.documentElement.style.backgroundSize = "cover";
+document.documentElement.style.height = "100%";
+document.documentElement.style.overflow = "hidden";
 
 function applyBackgroundImage(url) {
   document.documentElement.style.backgroundImage = `url('${url}')`;
-  document.documentElement.style.backgroundRepeat = "no-repeat";
-  document.documentElement.style.backgroundPosition = "center";
-  document.documentElement.style.backgroundAttachment = "fixed";
-  document.documentElement.style.backgroundSize = "cover";
-  document.documentElement.style.height = "100%";
-  document.documentElement.style.overflow = "hidden";
 }
 
 function preloadImage(url) {
